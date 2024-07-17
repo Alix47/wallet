@@ -1,4 +1,4 @@
-import prisma from "@repo/db/client";
+import prisma, { OnRampStatus } from "@repo/db/client";
 import { AddMoney } from "../../../components/AddMoneyCard";
 import { BalanceCard } from "../../../components/BalanceCard";
 import { OnRampTransactions } from "../../../components/OnRampTransactions";
@@ -25,7 +25,18 @@ async function getOnRampTransactions() {
             userId: Number(session?.user?.id)
         }
     });
-    return txns.map(t => ({
+    type OnRampStatusType = OnRampStatus;
+    interface OnRampTranscationType {
+        id: number;
+        status: OnRampStatusType;
+        token: string;
+        provider: string;
+        amount: number;
+        startTime: Date;
+        userId: number;
+      }
+      
+    return txns.map((t:OnRampTranscationType) => ({
         time: t.startTime,
         amount: t.amount,
         status: t.status,
