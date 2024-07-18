@@ -11,11 +11,7 @@
     },
     "main": "index.ts",
     "scripts": {
-        "build": "tsc -p ."
-    },
-    "exports": {
-        ".": "./index.ts",
-        "./index.ts": "./index.ts"
+        "build": "tsc"
     },
     "prisma": {
         "seed": "ts-node prisma/seed.ts"
