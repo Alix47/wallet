@@ -1,23 +1,8 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "module": "commonjs",
-    "lib": ["ES2020"],
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "@repo/db/*": ["packages/db/*"],
-    },
-    "typeRoots": ["./node_modules/@types", "./types"]
+  "extends": "@repo/typescript-config/react-library.json",
+"compilerOptions": {
+    "outDir": "dist"
   },
-  "include": ["packages/**/*"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
