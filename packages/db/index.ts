@@ -1,5 +1,5 @@
 import { PrismaClient, Prisma } from '@prisma/client';
-import { OnRampStatus } from '@prisma/client';
+import { type OnRampStatus } from '@prisma/client';
 
 const prismaClientSingleton = () => {
   return new PrismaClient();
@@ -13,10 +13,8 @@ const prisma: ReturnType<typeof prismaClientSingleton> = globalThis.prismaGlobal
 
 export default prisma;
 export type { Prisma };
-export {PrismaClient}
-
-type OnRampStatusType = OnRampStatus;
-export type {OnRampStatusType};
+export {PrismaClient};
+export {OnRampStatus}
 
 if (process.env.NODE_ENV !== 'production') {
   globalThis.prismaGlobal = prisma;

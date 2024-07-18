@@ -1,5 +1,4 @@
-import prisma from "@repo/db";
-import { OnRampStatusType } from "@repo/db";
+import prisma, { OnRampStatus } from "@repo/db";
 import { AddMoney } from "../../../components/AddMoneyCard";
 import { BalanceCard } from "../../../components/BalanceCard";
 import { OnRampTransactions } from "../../../components/OnRampTransactions";
@@ -26,7 +25,7 @@ async function getOnRampTransactions() {
             userId: Number(session?.user?.id)
         }
     });
-    
+    type OnRampStatusType = OnRampStatus;
     interface OnRampTranscationType {
         id: number;
         status: OnRampStatusType;
