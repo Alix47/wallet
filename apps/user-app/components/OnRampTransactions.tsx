@@ -1,5 +1,3 @@
-import { Card } from "@repo/ui/card"
-
 export const OnRampTransactions = ({
     transactions
 }: {
@@ -11,13 +9,15 @@ export const OnRampTransactions = ({
     }[]
 }) => {
     if (!transactions.length) {
-        return <Card title="Recent Transactions">
+        return <div className="border p-6 rounded-xl bg-[#ededed]">
+            <h1 className="text-xl border-b pb-2">Recent Transactions</h1>
             <div className="text-center pb-8 pt-8">
                 No Recent transactions
             </div>
-        </Card>
+        </div>
     }
-    return <Card title="Recent Transactions">
+    return <div className="border p-6 rounded-xl bg-[#ededed]">
+        <h1 className="text-xl border-b pb-2">Recent Transactions</h1>
         <div className="pt-2">
             {transactions.map(t => <div className="flex justify-between" key={t.amount}>
                 <div>
@@ -34,5 +34,5 @@ export const OnRampTransactions = ({
 
             </div>)}
         </div>
-    </Card>
+    </div>
 }

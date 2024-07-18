@@ -9,17 +9,11 @@
     "./appbar": "./src/Appbar.tsx",
     "./center": "./src/Center.tsx",
     "./select": "./src/Select.tsx",
-    "./textinput": "./src/TextInput.tsx",
-    "./*": {
-      "types": "./src/*.tsx",
-      "default": "./dist/*.js"
-    }
+    "./textinput": "./src/TextInput.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "dev": "tsc --watch",
-    "build": "tsc"
+    "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",

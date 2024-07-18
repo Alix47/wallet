@@ -1,4 +1,3 @@
-import { Card } from "@repo/ui/card";
 import { getServerSession } from "next-auth";
 import React from "react";
 import { authOptions } from "../app/lib/auth";
@@ -18,14 +17,16 @@ export const P2pTransactions = async ({
   
   if (!transactions.length) {
     return (
-      <Card title="Recent Transactions">
+        <div className="border p-6 rounded-xl bg-[#ededed]">
+        <h1 className="text-xl border-b pb-2">Recent Transactions</h1>
         <div className="text-center pb-8 pt-8">No Recent transactions</div>
-      </Card>
+      </div>
     );
   }
 
   return (
-    <Card title="Recent Transactions">
+    <div className="border p-6 rounded-xl bg-[#ededed]">
+        <h1 className="text-xl border-b pb-2">Recent Transactions</h1>
       <div>
         {transactions.map((t) => (
           <div className="flex w-full justify-between my-2">
@@ -57,6 +58,6 @@ export const P2pTransactions = async ({
           </div>
         ))}
       </div>
-    </Card>
+    </div>
   );
 };
