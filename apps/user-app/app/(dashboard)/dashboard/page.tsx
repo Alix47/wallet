@@ -1,7 +1,7 @@
 import { Card } from "@repo/ui/card";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../lib/auth";
-import prisma from "@repo/db/client";
+import prisma from "@repo/db";
 import { DashboardCard } from "../../../components/DashboardCard";
 import image1 from "../../../public/dashboard_transfer.webp"
 import Image from "next/image";

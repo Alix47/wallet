@@ -1,4 +1,4 @@
-import prisma, { OnRampStatus } from "@repo/db/client";
+import prisma, { OnRampStatus } from "@repo/db";
 import { AddMoney } from "../../../components/AddMoneyCard";
 import { BalanceCard } from "../../../components/BalanceCard";
 import { OnRampTransactions } from "../../../components/OnRampTransactions";

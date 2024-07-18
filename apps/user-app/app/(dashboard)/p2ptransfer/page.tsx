@@ -1,4 +1,4 @@
-import prisma from "@repo/db/client";
+import prisma from "@repo/db";
 import P2PTransfer from "../../../components/P2PTransfer";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../lib/auth";
