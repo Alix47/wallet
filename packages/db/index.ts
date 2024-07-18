@@ -14,7 +14,9 @@ const prisma: ReturnType<typeof prismaClientSingleton> = globalThis.prismaGlobal
 export default prisma;
 export type { Prisma };
 export {PrismaClient}
-export type {OnRampStatus};
+
+type OnRampStatusType = OnRampStatus;
+export type {OnRampStatusType};
 
 if (process.env.NODE_ENV !== 'production') {
   globalThis.prismaGlobal = prisma;
