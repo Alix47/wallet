@@ -4,7 +4,7 @@ export const OnRampTransactions = ({
     transactions: {
         time: Date,
         amount: number,
-        status: string,
+        // status: string,
         provider: string
     }[]
 }) => {
