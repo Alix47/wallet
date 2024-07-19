@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default async function() {
     const session = await getServerSession(authOptions);
-    const balance = await prisma.balance.findFirst({where:{userId: Number(session?.user?.id)}});
+    const balance = await prisma.balance.findFirstOrThrow({where:{userId: Number(session?.user?.id)}});
     if(!balance){
         return{
             message: "Login first!"
