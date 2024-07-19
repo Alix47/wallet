@@ -12,7 +12,7 @@ export default function P2PTransfer() {
         <div className="border p-6 rounded-xl bg-[#ededed]">
         <h1 className="text-xl border-b pb-2">P2P Transfer</h1>
             <div className='flex  flex-col  gap-4 w-full'>
-                <TextInput placeholder='Number' label='Number' onChange={(e:any)=>{setNumber(e)}}/>
+                <TextInput placeholder='1111111111' label='Number' onChange={(e:any)=>{setNumber(e)}}/>
                 <TextInput placeholder='Amount' label='Amount' onChange={(e:any)=>{setAmount(e)}}/>
                 <Button onClick={async()=>{
                   await p2ptransfer(number,amount);
