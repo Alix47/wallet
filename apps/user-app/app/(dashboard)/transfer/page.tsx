@@ -50,8 +50,9 @@ export default async function() {
     const transactions = await getOnRampTransactions();
 
     return <div className="w-screen">
-        <div className="text-4xl text-[#6a51a6] pt-8 mb-8 font-bold">
-            Transfer
+        <div className="pt-8 mb-8 flex flex-col">
+            <div className="text-4xl text-[#6a51a6] font-bold">Transfer</div>
+            <div className="text-2xl text-black">Note - The transactions will not be processed unless you have the access to the backend bank API. However your transfers are listed in the transactions table below because they are stil processing.</div>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 p-4">
             <div>
